@@ -20,6 +20,30 @@
  */
 import Foundation
 
+let currentYear: Int = 2020
+
+struct Person {
+    var firstName: String
+    var lastName: String
+    var yearOfBirth: Int
+    var age: Int {
+        get{
+            let newAge = currentYear - yearOfBirth
+            return newAge
+        }set(newAge) {
+            self.age = newAge
+        }
+    }
+    
+    
+}
+
+let somePerson = Person(firstName: "Joe", lastName: "Dirt", yearOfBirth: 1979)
+
+print(somePerson.yearOfBirth)
+print(somePerson.firstName + " " + somePerson.lastName)
+print(somePerson.age)
+print(somePerson.yearOfBirth)
 
 
 
