@@ -20,9 +20,15 @@
  */
 import Foundation
 
-let currentYear: Int = 2020
+
+var currentYear: Int {
+    Calendar.current.component(.year, from: Date())
+}
 
 struct Person {
+    
+    
+
     var firstName: String
     var lastName: String
     var yearOfBirth: Int
